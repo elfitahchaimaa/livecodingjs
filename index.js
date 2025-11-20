@@ -542,9 +542,14 @@ console.log(getBookingSummary());
 // CHALLENGE 10: Update a booking's status
 // RESTRICTION use Only for, while, and standard logic.
 function updateBookingStatus(bookingId, newStatus) {
-    
+    for(let i=0;i<spaceData.bookings.length;i++){
+        if(spaceData.bookings[i].id===bookingId){
+            return spaceData.bookings[i].status=newStatus;
+        }
+    }
     
 }
+
 
 
 // CHALLENGE 11: Calculate how much money each destination has made
