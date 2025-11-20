@@ -524,8 +524,20 @@ console.log(findMostExpensiveBooking() );
 function getBookingSummary() {
     // We want to make each booking simpler - just show:
     // id, destination, number of passengers, and total price
-    
+    const book=[];
+    for(let i=0;i<spaceData.bookings.length;i++){
+        const id=spaceData.bookings[i].id;
+        const destination=spaceData.bookings[i].destination;
+        const numpassenger=spaceData.bookings[i].passengers.length;
+        const total=spaceData.bookings[i].totalPrice;
+        book.push(id);
+        book.push(destination);
+        book.push(numpassenger);
+        book.push(total);
+    }
+    return book;
 }
+console.log(getBookingSummary());
 
 // CHALLENGE 10: Update a booking's status
 // RESTRICTION use Only for, while, and standard logic.
