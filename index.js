@@ -505,9 +505,19 @@ function groupBookingsByStatus() {
 // CHALLENGE 8: Find the most expensive booking
 // RESTRICTION use Only for, while, and standard logic.
 function findMostExpensiveBooking() {
+    let maxprice=0;
+    for(let i=0;i<spaceData.bookings.length;i++){
+        if(maxprice>=spaceData.bookings[i].totalPrice){
+            maxprice=spaceData.bookings[i].totalPrice;
+            
+        }
+        return spaceData.bookings[i].id;
+        
+    }
     
 
 }
+console.log(findMostExpensiveBooking() );
 
 // CHALLENGE 9: Create a simple summary of all bookings
 // NO RESTRICTION You are encouraged to use map, filter, reduce, and Object.keys/Object.values/Object.entries where appropriate.
